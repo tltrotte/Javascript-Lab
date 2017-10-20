@@ -15,7 +15,7 @@ var namepoints = 40;
 var grantLosses = 0;
 var nameWins = 0;
 var grantWins = 0;
-
+var round = 2
 // game battle
 
 
@@ -41,6 +41,7 @@ while(grantpoints >= 0 && namepoints >= 0){
 
     if (grantpoints <= 0 && grantLosses < 3) {
       grantpoints = 10;
+      console.log ("Round " + round++ )
     }
   }
   if (namepoints <= 0) {
