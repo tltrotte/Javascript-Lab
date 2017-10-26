@@ -77,7 +77,7 @@ var player = {
 startGame();
 
 function startCombat(){
-  while(grant.health > 0 && player.health >0 && player.wins <  3){
+  while(grant.health > 0 && player.health >0){
     var damage =  prompt("Attack, quit or heal");
    if (damage === "Attack"){
       player.health -= grant.generateAttackDamage();
@@ -102,7 +102,8 @@ function startCombat(){
           grantWins ++;
           console.log(name +" has lost the game.");
         }
-        else { player.wins = player.wins++;
+        else if ( grant.health <=0)
+          {player.wins += player.wins++;
          console.log (player.title + " wins the game!");
        }
 
@@ -117,6 +118,7 @@ function startCombat(){
  console.log ("FINAL SCORE");
   console.log(grantWins + " wins for Almighty Grant");
   console.log( player.wins + " wins for " + player.title);
+}
 }
 /*function startGame (){
   var start = prompt ("Would you like to play a game?");
