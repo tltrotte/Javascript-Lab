@@ -1,17 +1,18 @@
 
 var start = document.getElementsByTagName("button")[0];
+var name="";
 start.onclick = function (){
     var name = prompt ('What do they call you?');
     document.getElementById("startButton").style.display = "none";
     document.getElementById("second").style.display = "block";
     player.title = name;
 }
-document.getElementsByClassName("playerName").innerHTML = name;
+
 var startAttack = document.getElementById("attack");
 startAttack.onclick = function() {
   player.health -= grant.generateAttackDamage();
   grant.health-= player.generateAttackDamage();
-  document.getElementById("playerSpan").innerHTML = player.health;
+  document.getElementById("playerSpan").innerHTML = player.title + "'s status " + player.health;
   document.getElementById("grantSpan").innerHTML = grant.health;
   document.getElementById("playerStatus").value = (player.health -= grant.generateAttackDamage());
   document.getElementById("grantStatus").value = (grant.health-= player.generateAttackDamage());
@@ -21,6 +22,12 @@ startAttack.onclick = function() {
         document.getElementById("winStatus").value= player.wins;
         console.log ("Next Round");
 
+      }
+      if (player.wins === 3 ){
+        alert(player.title + " is the winner");
+      }
+      if(player.health <= 0){
+        alert (grant.title + " is the winner");
       }
 
 }
@@ -32,9 +39,14 @@ healButton.onclick = function (){
 
 }
 
+var quitButton = document.getElementById("quit");
+quitButton.onclick = function (){
+  alert("See ya later loser");
+}
+
 
 var player = {
-title: name,
+title: "",
 health: 40,
 wins:0,
 healCount:0,
