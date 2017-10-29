@@ -2,6 +2,7 @@
 body {
   background-color: rgba(190 ,217, 249, 1);
 
+
 }
 
 button {
@@ -20,5 +21,29 @@ display: contents;
 }
 #second {
   display:none;
- border: 2px solid black
+
+}
+#info{
+  border: 1px solid black;
+}
+
+.topbar{
+  display: inline;
+
+}
+#playerStatus{
+  width: 25%;
+
+}
+#healStatus{
+  width: 25%;
+
+}
+#winStatus{
+  width: 25%;
+
+}
+
+
+
 }

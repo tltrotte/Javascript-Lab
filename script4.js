@@ -21,7 +21,6 @@ startAttack.onclick = function() {
         player.wins++ ;
         document.getElementById("winStatus").value= player.wins;
         console.log ("Next Round");
-
       }
       if (player.wins === 3 ){
         alert(player.title + " is the winner");
@@ -51,7 +50,7 @@ health: 40,
 wins:0,
 healCount:0,
 generateAttackDamage: function(){
-  return Math.floor(Math.random() * 3) + 1
+  return Math.floor(Math.random() * 2) + 1
   },
 heal: function(){
   this.health+=Math.floor(Math.random() * 10) + 1
@@ -61,6 +60,6 @@ var grant = {
   title: "The Almighty Grant",
   health: 10,
   generateAttackDamage: function() {
-    return Math.floor(Math.random() * 3) + 1
+    return Math.floor(Math.random() * 2) + 1
   }
 };

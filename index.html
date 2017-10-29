@@ -11,16 +11,23 @@
 <button id= "attack" type = "button">Attack</button>
 <button id= "heal" type = "button">Heal</button>
 <button id= "quit" type = "button">Quit</button>
-
 <p> <span class = "playerName"> </span> <span id = "playerSpan"> </span>
 Grant status <span id = "grantSpan"></span> </p>
 <div>
+  <div id = "info">
   <h2><span class = "playerName"> Player Stats </span></h2>
-<p>Health</p>  <progress id = "playerStatus" value="40" max="40"></progress>
-  <progress id = "healStatus" value="0" max="2"></progress>
-  <progress id = "winStatus" value="0" max="5"></progress>
-  <h2>Enemy Stats</h2>
+  <p class = "topbar"> Health</p> <p class = "topbar"> Heal</p><p class = "topbar"> Wins</p>
+  <br>
+
+<progress id = "playerStatus" value="40" max="40"></progress>
+<progress id = "healStatus" value="0" max="2"></progress>
+ <progress id = "winStatus" value="0" max="3"></progress>
+ <h2><span class = "grantName"> Grant Stats </span></h2>
+ <p class = "topbar"> Wins</p>
+ <br>
+
   <progress id = "grantStatus" value="10" max="10"></progress>
+</div>
 </div>
 </div>
 <script src=script4.js></script>
